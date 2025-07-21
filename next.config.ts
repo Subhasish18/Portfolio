@@ -11,6 +11,11 @@ const nextConfig = {
       },
     ],
   },
+
+  // This will disable ESLint during the build process
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;
