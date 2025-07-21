@@ -96,10 +96,11 @@ export const CardBody = ({
   );
 };
 
+// --- This is the section that was fixed ---
 type CardItemProps<T extends React.ElementType> = {
   as?: T;
-  children,
-  className,
+  children: React.ReactNode; // Explicitly typed children
+  className?: string; // Added optional flag to match usage
   translateX?: number | string;
   translateY?: number | string;
   translateZ?: number | string;
