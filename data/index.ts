@@ -100,7 +100,7 @@ export const projects = [
     des: "An intuitive weather dashboard providing real-time forecasts for any city, powered by JavaScript and the OpenWeatherMap API.",
     img: "/wap.png",
     iconLists: ["/js.svg", "/html.svg", "/css.svg","/netlify.svg"],
-    link: "https://weather-api-subhasish.netlify.app/",
+    link: "https://github.com/Subhasish18/WEATHER-API--JS-",
   },
 ];
 

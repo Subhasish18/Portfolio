@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion"; // Import motion
 import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
@@ -106,19 +107,21 @@ export const BentoGridItem = ({
       <div className={`${id === 6 ? "flex justify-center" : ""} h-full`}>
         {/* Main image */}
         {img && (
-          <img
+          <Image
             src={img}
-            alt=""
+            alt={typeof title === "string" ? title : "background image"}
             className={cn("w-full h-full absolute object-cover object-center", imgClassName)}
+            layout="fill"
           />
         )}
 
         {/* Spare image */}
         {spareImg && (
-          <img
+          <Image
             src={spareImg}
-            alt=""
+            alt={typeof title === "string" ? title : "spare image"}
             className="absolute right-0 -bottom-5 w-full h-full object-cover object-center opacity-80"
+            layout="fill"
           />
         )}
 

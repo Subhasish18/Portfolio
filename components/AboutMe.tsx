@@ -18,7 +18,7 @@ const AboutMe = () => {
       content: (
         <div>
           <p className="mb-4 text-sm font-sans md:text-base dark:text-neutral-300 font-bold">
-            This period was crucial for my personal growth. Navigating challenges was pivotal in developing my resilience and perseverance, strengthening my ability to stay focused when tackling complex technical problems. It also taught me the value of collaboration and constructive feedback—principles I now apply to every project.
+            This period was crucial for my personal growth. Navigating challenges was pivotal in developing my resilience and perseverance, strengthening my ability to stay focused when tackling complex technical problems. It also taught me the value of collaboration and constructive feedback&mdash;principles I now apply to every project.
           </p>
           <p className="mb-4 text-sm font-sans md:text-base dark:text-neutral-300 font-bold">
             Alongside this, I focused on dedicated upskilling through the following certifications:
@@ -28,13 +28,13 @@ const AboutMe = () => {
                Completed Full-Stack Development Training from Euphoria (Mar 2025).
             </div>
             <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 font-bold">
-               Earned a "What is Data Science?" certification from IBM (May 2024).
+               Earned a &ldquo;What is Data Science?&rdquo; certification from IBM (May 2024).
             </div>
             <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 font-bold">
-               Completed the "Google Crash Course on Python" via Coursera (Nov 2023).
+               Completed the &ldquo;Google Crash Course on Python&rdquo; via Coursera (Nov 2023).
             </div>
              <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 font-bold">
-                Gained hands-on experience in a 3-week internship on Cyber Security & Artificial Intelligence at SRIC.
+                Gained hands-on experience in a 3-week internship on Cyber Security &amp; Artificial Intelligence at SRIC.
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ const AboutMe = () => {
       content: (
         <div>
           <p className="mb-4 text-sm font-sans md:text-base dark:text-neutral-300 font-bold">
-            When I'm not coding, I find balance and inspiration in other passions. Music is a constant companion that helps me focus and unwind, and I enjoy exploring new worlds through movies. I'm also an avid fitness enthusiast, and love exploring new places through driving and travel, often with a camera in hand to capture moments through photography.
+            When I&apos;m not coding, I find balance and inspiration in other passions. Music is a constant companion that helps me focus and unwind, and I enjoy exploring new worlds through movies. I&apos;m also an avid fitness enthusiast, and love exploring new places through driving and travel, often with a camera in hand to capture moments through photography.
           </p>
         </div>
       ),
@@ -66,14 +66,13 @@ const AboutMe = () => {
     <div id="aboutme" className="relative w-full">
       <Timeline
         data={data}
-        // Pass the path to your photo here
         imageSrc="/photoport.jpg"
         title={
           <span className="font-bold text-4xl md:text-5xl">
             About <span className="text-purple-400">Me</span>
           </span>
         }
-        description="I'm a developer driven by curiosity and a passion for building clean, efficient, and user-friendly applications. This timeline highlights my key milestones and the technologies I've mastered along the way."
+        description="I&apos;m a developer driven by curiosity and a passion for building clean, efficient, and user-friendly applications. This timeline highlights my key milestones and the technologies I&apos;ve mastered along the way."
       />
     </div>
   );
