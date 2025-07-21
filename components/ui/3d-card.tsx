@@ -36,12 +36,12 @@ export const CardContainer = ({
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   };
 
-  const handleMouseEnter = (_e: React.MouseEvent<HTMLDivElement>): void => {
+  const handleMouseEnter = (): void => {
     setIsMouseEntered(true);
     if (!containerRef.current) return;
   };
 
-  const handleMouseLeave = (_e: React.MouseEvent<HTMLDivElement>): void => {
+  const handleMouseLeave = (): void => {
     if (!containerRef.current) return;
     setIsMouseEntered(false);
     containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
@@ -96,8 +96,20 @@ export const CardBody = ({
   );
 };
 
-export const CardItem = ({
-  as: Tag = "div",
+type CardItemProps<T extends React.ElementType> = {
+  as?: T;
+  children,
+  className,
+  translateX?: number | string;
+  translateY?: number | string;
+  translateZ?: number | string;
+  rotateX?: number | string;
+  rotateY?: number | string;
+  rotateZ?: number | string;
+} & React.ComponentPropsWithoutRef<T>;
+
+export const CardItem = <T extends React.ElementType = "div">({
+  as,
   children,
   className,
   translateX = 0,
@@ -106,19 +118,9 @@ export const CardItem = ({
   rotateX = 0,
   rotateY = 0,
   rotateZ = 0,
-  ...rest // Accept rest props
-}: {
-  as?: React.ElementType;
-  children: React.ReactNode;
-  className?: string;
-  translateX?: number | string;
-  translateY?: number | string;
-  translateZ?: number | string;
-  rotateX?: number | string;
-  rotateY?: number | string;
-  rotateZ?: number | string;
-  [key: string]: any; // This will be overridden by inferred type from 'as'
-}) => {
+  ...rest
+}: CardItemProps<T>) => {
+  const Tag = as || "div";
   const ref = useRef<HTMLDivElement>(null);
   const [isMouseEntered] = useMouseEnter();
 

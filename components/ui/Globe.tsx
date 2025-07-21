@@ -173,7 +173,14 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .ringRepeatPeriod(
         (defaultProps.arcTime * defaultProps.arcLength) / defaultProps.rings
       );
-  }, [globeData, data, defaultProps]);
+  }, [
+    globeData,
+    data,
+    defaultProps.arcLength,
+    defaultProps.arcTime,
+    defaultProps.maxRings,
+    defaultProps.rings,
+  ]);
 
   useEffect(() => {
     if (globeRef.current) {
@@ -194,7 +201,14 @@ export function Globe({ globeConfig, data }: WorldProps) {
         .hexPolygonColor(() => defaultProps.polygonColor);
       startAnimation();
     }
-  }, [globeData, startAnimation, defaultProps]);
+  }, [
+    globeData,
+    startAnimation,
+    defaultProps.showAtmosphere,
+    defaultProps.atmosphereColor,
+    defaultProps.atmosphereAltitude,
+    defaultProps.polygonColor,
+  ]);
 
   useEffect(() => {
     if (!globeRef.current || !globeData) return;
