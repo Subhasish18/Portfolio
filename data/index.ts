@@ -91,7 +91,7 @@ export const projects = [
     title: "OnlineBidding - FullStack Auction House",
     des: "A full-stack online auction house, architected with a headless PHP-Laravel backend serving a responsive Next.js frontend.",
     img: "/ob.png",
-    iconLists: ["/laravel.svg", "/tail.svg", "/next.svg","/mysql.svg"],
+    iconLists: ["/laravel.svg", "/tail.svg", "/react-native.svg","/mysql.svg"],
     link: "https://github.com/Subhasish18/OnlineBidding",
   },
   {
